@@ -1,0 +1,20 @@
+from models.base_model import BaseModel
+
+# Create a new instance
+new_instance = BaseModel()
+print(new_instance)
+
+# Save the instance
+new_instance.save()
+
+# Convert to dictionary
+print(new_instance.to_dict())
+
+# Convert to JSON
+print(new_instance.to_json())
+
+# Reload an instance from JSON
+instance_data = new_instance.to_dict()
+reloaded_instance = BaseModel(**instance_data)
+print(reloaded_instance)
+
